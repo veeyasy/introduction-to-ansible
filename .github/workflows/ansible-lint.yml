@@ -1,14 +1,10 @@
-name: Ansible Lint  # feel free to pick your own name
-
+name: ansible-lint
 on: [push]
-
 jobs:
   build:
-
+    name: Ansible Lint
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-
-    - name: Lint Ansible Playbook
-      uses: ansible/ansible-lint@v6.22.1
+      - uses: actions/checkout@v4
+      - name: Run ansible-lint
+        uses: ansible/ansible-lint@v6.22.1
