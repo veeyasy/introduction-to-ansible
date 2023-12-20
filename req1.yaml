@@ -15,7 +15,7 @@ name: Configure standard ACL
      ios_config:
        parents: int e0/1
        lines:
-         - access-class REQ1 out
+         - ip access-group REQ1 out
 
    - name: Check result
      ios_command:
