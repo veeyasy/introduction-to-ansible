@@ -19,7 +19,7 @@ name: Configure standard ACL
 
    - name: Check result
      ios_command:
-       commands: sh ip access-lists
+       commands: sh ip access-lists REQ1
      register: result
      tags: show
 
